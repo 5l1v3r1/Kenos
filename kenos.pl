@@ -26,8 +26,8 @@ print " ██ ▄█▀▓█████  ███▄    █  ▒████
 ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░▒  ░ ░
 ░ ░░ ░    ░      ░   ░ ░ ░ ░ ░ ▒  ░  ░  ░  
 ░  ░      ░  ░         ░     ░ ░        ░  
-    KEN0S Slammed $ip on port" . ($port ? $port : " ") . "  " . 
-  ($size ? "$size-Slammed" : " Port: 65500") . " PPS: 63kbps" . 
+    KEN0S Slammed $ip on port" . ($port ? $port : "On random ports") . "  " . 
+  ($size ? "$size-Slammed" : " PPS: 65500") . " Data: 63kbps" . 
   ($time ? " for $time seconds" : "") . "\n";
 print "Stop NULLING With Ctrl-C\n" unless $time;
  
