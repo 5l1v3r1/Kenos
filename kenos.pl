@@ -26,7 +26,7 @@ print " ██ ▄█▀▓█████  ███▄    █  ▒████
 ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░▒  ░ ░
 ░ ░░ ░    ░      ░   ░ ░ ░ ░ ░ ▒  ░  ░  ░  
 ░  ░      ░  ░         ░     ░ ░        ░  
-    KEN0S Slammed $ip " . ($port ? $port : "On random ports") . " With" . 
+    KEN0S Slammed $ip " . ($port ? $port : "On random ports") . " With " . 
   ($size ? "$size-Slammed" : " PPS: 65500") . " Data: 63kbps" . 
   ($time ? " for $time seconds" : "") . "\n";
 print "Stop slamming with Ctrl-C\n" unless $time;
