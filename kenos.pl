@@ -26,8 +26,7 @@ print color("cyan"), " ██ ▄█▀▓█████  ███▄    █  
 ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░
 ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░  ░ ▒ ▒░ ░ ░▒  ░ ░
 ░ ░░ ░    ░      ░   ░ ░ ░ ░ ░ ▒  ░  ░  ░  
-░  ░      ░  ░         ░     ░ ░        ░  
-                                           "
+░  ░      ░  ░         ░     ░ ░        ░  ", color("reset");
   ($port ? $port : "KEN0S Slammed $ip ")
   ($size ? "$size-Slammed" : "65500") . " PPS: 63kbs" . 
   ($time ? " for $time seconds" : "") . "\n";
