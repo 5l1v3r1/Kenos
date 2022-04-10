@@ -1,2 +1,2 @@
-# KEN0S
+# Kenos
 I made this script from a tutorial on YouTube for making Perl script.
